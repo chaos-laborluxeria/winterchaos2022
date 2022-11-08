@@ -81,7 +81,7 @@ defaults:
             <a href="https://goo.gl/maps/HrSMu33hREPF8U8XA">Degenstrasse 3, 6010 Kriens</a>
 
           <i class="fas fa-fw fa-bullhorn"></i>
-            <a href="/cfp/">CFP • 14.-30. November 2022</a>
+            <a href="cfp/">CFP • 14.-30. November 2022</a>
   # _posts
   - scope:
       path: ""
