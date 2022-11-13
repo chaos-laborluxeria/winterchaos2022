@@ -15,4 +15,7 @@ Dafür suchen wir noch spannende Vorträge für einen der folgenden fünf Katego
 
 Wir freuen uns über Vorträge, Kurzvorträge und Workshops.
 
-Deinen Beitrag kannst du [hier](https://www.papercall.io/winterchaos) online einreichen oder per Mail an michi[at]laborluzernPUNKTch.
+[Beitrag einreichen](https://www.papercall.io/winterchaos){: .btn .btn--primary .btn--large}
+{: .text-center}
+
+Deinen Beitrag kannst du [bei Papercall](https://www.papercall.io/winterchaos) online einreichen oder per Mail an michi[at]laborluzernPUNKTch.

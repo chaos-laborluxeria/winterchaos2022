@@ -80,8 +80,14 @@ defaults:
           <i class="fas fa-fw fa-map-marked-alt"></i>
             <a href="https://goo.gl/maps/HrSMu33hREPF8U8XA">Degenstrasse 3, 6010 Kriens</a>
 
+          <i class="fas fa-fw fa-comments"></i>
+            <a href="https://matrix.to/#/#chaos:laborluzern.ch">#chaos:laborluzern.ch</a> <br>
+          <!-- <i class="fas fa-fw fa-video"></i>
+            <a href="https://meet.luxeria.ch/ChaosImLabor">meet.luxeria.ch/ChaosImLabor</a> -->
+
+          <!-- TODO(@gandro): Figure out if we can use the base_url here -->
           <i class="fas fa-fw fa-bullhorn"></i>
-            <a href="cfp/">CFP • 14.-30. November 2022</a>
+            <a href="https://laborluxeria.github.io/winterchaos2022/cfp/">CFP • 14.-30. November 2022</a>
   # _posts
   - scope:
       path: ""

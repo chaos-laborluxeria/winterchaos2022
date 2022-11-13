@@ -6,9 +6,15 @@ search: false
 
 @charset "utf-8";
 
+$primary-color: #4E7EDE;
+$link-color: $primary-color;
+$link-color-visited: $link-color;
+
+$intro-transition  : none;
+$global-transition : none;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-
 
 .sidebar {
     a {
