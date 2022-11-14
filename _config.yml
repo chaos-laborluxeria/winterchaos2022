@@ -84,7 +84,7 @@ defaults:
 
           <!-- TODO(@gandro): Figure out if we can use the base_url here -->
           <i class="fas fa-fw fa-bullhorn"></i>
-            <a href="https://laborluxeria.github.io/winterchaos2022/cfp/">CFP • 14.-30. November 2022</a>
+            <a href="https://laborluxeria.github.io/winterchaos2022/cfp/">CFP • bis 4. Dezember 2022</a>
   # _posts
   - scope:
       path: ""
