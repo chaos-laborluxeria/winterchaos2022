@@ -1,0 +1,34 @@
+---
+permalink: /schedule/
+title: "Fahrplan"
+---
+
+{% assign days = site.sessions | concat: site.data.schedulegaps | group_by: "day" | sort: "name" %}
+{% assign i = 1 %}
+<table class="schedule">
+{% for day in days %}
+    <thead>
+        <tr>
+            <td style="white-space: nowrap;"><b><i class="far fa-calendar"></i> Tag {{ i }}</b></td>
+            <td class="schedule-title" colspan="2"><time datetime="{{ day.name }}">{{ day.name | date: "%-d. Dezember %Y" }}</time></td>
+        </tr>
+    </thead>
+    {% assign day_sessions = day.items | where: "public", true | sort: "start" %}
+    {% assign sessions_after_lunch = day_sessions | where_exp: "item", "item.start >= '12:00'" %}
+    {% assign sessions_after_midnight = day_sessions | where_exp: "item", "item.start < '12:00'" %}
+    {% assign sorted_sessions = sessions_after_lunch | concat: sessions_after_midnight %}
+    {% for session in sorted_sessions %}
+    <tr class="schedule-{{ session.type }}">
+        <td class="schedule-start">{{ session.start }}</td>
+        {% if session.type == "break" %}
+        <td class="schedule-title">{{ session.title }}</td>
+        <td></td>
+        {% else %}
+        <td class="schedule-title"></b><a href="{{ session | relative_url }}">{{ session.title }}</a></td>
+        <td class="schedule-speaker"><i class="far fa-user"></i> {{ session.speaker }}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+    {% assign i = i | plus:1 %}
+{% endfor %}
+</table>

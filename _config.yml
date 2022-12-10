@@ -37,6 +37,13 @@ locale: de-CH
 include:
   - _pages
 
+# Talks/Workshops session landing pages
+collections:
+  sessions:
+    sort_by: speaker
+    permalink: /:collection/:path
+    output: true
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

@@ -1,0 +1,29 @@
+---
+layout: single
+---
+
+<small>
+    <i class="far fa-arrow-alt-circle-left"></i> <a class="nocolor" href="{{ '/schedule/' | relative_url }}">Zurück zum Fahrplan</a>
+</small>
+
+{% assign session = site.sessions | where_exp: "item", "item.id == page.id" | first %}
+{% if session.public %}
+<div class="notice">
+    {% if session.day %}
+        <i class="far fa-calendar"></i> <time datetime="{{ session.day }}">{{ session.day | date: "%d.%m.%Y"}}</time>
+        {% if session.start %}
+        <i class="far fa-clock" style="padding-left: 1em;"></i> {{ session.start }}
+        {% endif %}
+    {% endif %}
+    {% if session.speaker %}
+        <i class="far fa-user" style="padding-left: 1em;"></i> {{ session.speaker }}
+    {% endif %}
+</div>
+
+{% if session.desc %}
+{{ session.desc | markdownify }}
+{% else %}
+{{ session.short | markdownify }}
+{% endif %}
+
+{% endif %}{% comment %}session.public{% endcomment %}

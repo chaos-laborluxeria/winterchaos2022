@@ -27,6 +27,41 @@ $global-transition : none;
     }
 }
 
+a.nocolor {
+    color: $text-color;
+}
+
+.schedule {
+    td {
+        padding: 1em;
+    }
+
+    thead {
+        background-color: $primary-color;
+    }
+
+    td.schedule-start {
+        font-weight: bold;
+        text-align: right;
+    }
+
+    tr.schedule-break {
+        background-color: $form-background-color;
+        td.schedule-title {
+            text-align: center;
+        }
+    }
+
+    tr.schedule-talk {
+        td.schedule-title {
+            font-weight: bold;
+            a {
+                color: $text-color;
+            }
+        }
+    }
+}
+
 .page__footer-copyright {
     display: none;
 }

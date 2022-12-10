@@ -7,8 +7,11 @@
 - Navigation: `_data/navigation.yml`
 - Seiten: `_pages/`
 - Blog: `_posts/`
+- Talks: `_sessions/`
+- Pausen, Türöffnung etc: `_data/schedulegaps.yml`
 
-## Build
+
+## Local Preview
 
 ```console
 $ bundle config set --local path 'vendor/bundle'
