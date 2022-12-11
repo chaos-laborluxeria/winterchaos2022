@@ -40,7 +40,6 @@ include:
 # Talks/Workshops session landing pages
 collections:
   sessions:
-    sort_by: speaker
     permalink: /:collection/:path
     output: true
 
