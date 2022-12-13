@@ -1,16 +1,13 @@
+--- 
+# Only the main Sass file needs front matter (the dashes are enough) search: false 
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
----
-
-
 @charset "utf-8";
 
 $primary-color: #4E7EDE;
 $link-color: $primary-color;
 $link-color-visited: $link-color;
 
-$intro-transition  : none;
+$intro-transition : none;
 $global-transition : none;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
@@ -31,6 +28,12 @@ a.nocolor {
     color: $text-color;
 }
 
+.session-notice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+}
+
 .schedule {
     td {
         padding: 1em;
@@ -47,6 +50,7 @@ a.nocolor {
 
     tr.schedule-break {
         background-color: $form-background-color;
+
         td.schedule-title {
             text-align: center;
         }
@@ -55,6 +59,7 @@ a.nocolor {
     tr.schedule-talk {
         td.schedule-title {
             font-weight: bold;
+
             a {
                 color: $text-color;
             }

@@ -8,15 +8,34 @@ layout: single
 
 {% assign session = site.sessions | where_exp: "item", "item.id == page.id" | first %}
 {% if session.public %}
-<div class="notice">
+<div class="notice session-notice">
     {% if session.day %}
+    <span class="session-item">
         <i class="far fa-calendar"></i> <time datetime="{{ session.day }}">{{ session.day | date: "%d.%m.%Y"}}</time>
         {% if session.start %}
-        <i class="far fa-clock" style="padding-left: 1em;"></i> {{ session.start }}
+        </span><span class="session-item">
+        <i class="far fa-clock" ></i> {{ session.start }}
         {% endif %}
+    </span>
+    {% endif %}
+    {% if session.lang %}
+    <span class="session-item">
+        <i class="fas fa-globe"></i> {{ session.lang }}
+    </span>
+    {% endif %}
+    {% if session.remote %}
+    <span class="session-item">
+        <i class="fas fa-laptop-house"></i> Remote
+    </span>
+    {% else %}
+    <span class="session-item">
+        <i class="fas fa-map-marker-alt"></i> Im LABOR
+    </span>
     {% endif %}
     {% if session.speaker %}
-        <i class="far fa-user" style="padding-left: 1em;"></i> {{ session.speaker }}
+    <span class="session-item">
+        <i class="far fa-user"></i> {{ session.speaker }}
+    </span>
     {% endif %}
 </div>
 

@@ -1,6 +1,6 @@
 main:
-  - title: "CFP"
-    url: /cfp/
+  - title: "Programm"
+    url: /schedule/
   - title: "Blog"
     url: /posts/
   - title: "Kontakt"
