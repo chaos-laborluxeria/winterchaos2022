@@ -1,0 +1,88 @@
+---
+permalink: /schedule.json
+layout: null
+---
+{
+  "schedule": {
+    "version": "0.1",
+    "base_url": "https://laborluxeria.github.io/winterchaos2022/schedule/",
+    "conference": {
+      "acronym": "winterchaos-2022",
+      "title": "Winterchaos",
+      "start": "2022-12-28",
+      "end": "2022-12-30",
+      "daysCount": 3,
+      "timeslot_duration": "00:05",
+      "time_zone_name": "Europe/Zurich"
+    },
+    "rooms": [
+      {
+        "name": "Winterchaos",
+        "guid": "99411f15-7335-4d36-abac-3ff0419ec954",
+        "description": "Talks at LuXerias and LABOR Luzerns Winterchaos 2022",
+        "capacity": null
+      }
+    ],
+    "days": [
+      {% assign days = site.sessions | group_by: "day" | sort: "name" %}
+      {% assign all_sessions = days | map: "items" %}
+      {% assign all_speakers = all_sessions | map: "speaker" | join: ", " | split: ", " | uniq %}
+      {% assign i = 1 %}
+      {% for day in days %}
+        {
+          "index": {{ i }},
+          "date": "{{ day.name }}",
+          "day_start": "{{ day.name }}T00:00:00+01:00",
+          "day_end": "{{ day.name }}T00:00:00+01:00",
+          "rooms": {
+            "Winterchaos": [
+              {% assign sessions = day.items | where: "public", true | sort: "start" %}
+              {% for session in sessions %}
+              {
+                "id": "{{ session.talk_id }}",
+                "guid": "8e3616f7-df59-4f67-847d-783fea4a{{ session.talk_id }}",
+                "logo": "",
+                "date": "{{ session.day }}T{{ session.start }}:00+01:00",
+                "duration": "00:45",
+                "room": "Winterchaos",
+                "url": "{{ session | absolute_url }}",
+                "title": "{{ session.title }}",
+                "subtitle": "",
+                "track": "Winterchaos",
+                "type": "{{ session.type }}",
+                "language": "{{ session.lang | downcase }}",
+                "abstract": "{{ session.short | strip_newlines }}",
+                "description": "{{ session.desc | escape | newline_to_br | strip_newlines }}",
+                "recording_license": "",
+                "do_not_record": {{ session.do_not_record }},
+                {% assign speakers = session.speaker | split: ", " %}
+                "persons": [
+                  {% for speaker in speakers %}
+                    {
+                      {% for s in all_speakers %}
+                        {% if s == speaker %}
+                          {% assign speaker_id = forloop.index0 %}
+                          {% break %} 
+                        {% endif %}
+                      {% endfor %}
+                      "id": {{ speaker_id }},
+                      "code": "{{ speaker | upcase | slice: 0, 3}}{{ speaker_id }}", 
+                      "public_name": "{{ speaker }}",
+                      "bibliography": "",
+                      "answers": []
+                    }{% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                ],
+                "links": [],
+                "attachments": [],
+                "answers": []
+              }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ]
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% assign i = i | plus:1 %}
+      {% endfor %}
+    ]
+  }
+}
