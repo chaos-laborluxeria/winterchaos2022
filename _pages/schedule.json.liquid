@@ -30,8 +30,8 @@ layout: null
                 {% assign sessions = day.items | where: "public", true | sort: "start" %}
                 {% for session in sessions %}
                 {
-                  "id": "{{ session.talk_id }}",
-                  "guid": "8e3616f7-df59-4f67-847d-783fea4a{{ session.talk_id }}",
+                  "id": "{{ session.slug | split: '-' | first }}",
+                  "guid": "{{ session.talk_guid }}",
                   "logo": "",
                   "date": "{{ session.day }}T{{ session.start }}:00+01:00",
                   "duration": "00:45",
