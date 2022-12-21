@@ -50,14 +50,6 @@
   code: SEA12
   public_name: Sean
   bibliography: ''
-- id: 8
-  code: PAS8
-  public_name: Pascal
-  bibliography: ''
-- id: 4
-  code: CLA4
-  public_name: Claus
-  bibliography: ''
 - id: 13
   code: CYR13
   public_name: Cyrill
@@ -77,8 +69,4 @@
 - id: 17
   code: OLI17
   public_name: Oli
-  bibliography: ''
-- id: 13
-  code: CYR13
-  public_name: Cyrill
   bibliography: ''
