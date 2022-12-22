@@ -66,9 +66,17 @@ plugins:
 
 footer:
   links:
+    - label: "Code of Conduct"
+      icon: "fas fa-hands-helping"
+      url: "https://laborluxeria.github.io/winterchaos2022/code-of-conduct/"
+    - label: "COVID Policy"
+      icon: "fas fa-head-side-mask"
+      url: "https://laborluxeria.github.io/winterchaos2022/covid-policy/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/laborluxeria"
+
+
 
 
 defaults:
