@@ -34,8 +34,10 @@ layout: null
                   "guid": "{{ session.talk_guid }}",
                   "logo": "",
                   "date": "{{ session.day }}T{{ session.start }}:00+01:00",
+                  "start": "{{ session.start }}",
                   "duration": "00:45",
                   "room": "Winterchaos",
+                  "slug": "{{ session.slug }}",
                   "url": "{{ session | absolute_url }}",
                   "title": "{{ session.title }}",
                   "subtitle": "",
@@ -53,7 +55,7 @@ layout: null
                         "id": {{ speaker.id | default: "-1" }},
                         "code": "{{ speaker.code }}",
                         "public_name": "{{ speaker_name }}",
-                        "bibliography": "{{ speaker.bibliography }}",
+                        "biography": "{{ speaker.biography }}",
                         "answers": []
                       }{% unless forloop.last %},{% endunless %}
                       {% endfor %}
