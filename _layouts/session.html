@@ -32,9 +32,9 @@ layout: single
         <i class="fas fa-map-marker-alt"></i> Im LABOR
     </span>
     {% endif %}
-    {% if session.speaker %}
+    {% if session.speakers %}
     <span class="session-item">
-        <i class="far fa-user"></i> {{ session.speaker }}
+        <i class="far fa-user"></i> {{ session.speakers | join: ", " }}
     </span>
     {% endif %}
 </div>

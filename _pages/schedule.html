@@ -25,7 +25,7 @@ title: "Fahrplan"
         <td></td>
         {% else %}
         <td class="schedule-title"></b><a href="{{ session | relative_url }}">{{ session.title }}</a></td>
-        <td class="schedule-speaker"><i class="far fa-user"></i> {{ session.speaker }}</td>
+        <td class="schedule-speaker"><i class="far fa-user"></i> {{ session.speakers | join: ", " }}</td>
         {% endif %}
     </tr>
     {% endfor %}
