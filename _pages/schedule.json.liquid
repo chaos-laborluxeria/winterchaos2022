@@ -3,17 +3,26 @@ permalink: /schedule.json
 layout: null
 ---
 {
+  "$schema": "https://c3voc.de/schedule/schema.json",
   "schedule": {
-    "version": "0.1",
+    "version": "0.2",
     "base_url": "https://laborluxeria.github.io/winterchaos2022/schedule/",
     "conference": {
-      "acronym": "winterchaos-2022",
+      "acronym": "winterchaos2022",
       "title": "Winterchaos",
       "start": "2022-12-28",
       "end": "2022-12-30",
       "daysCount": 3,
       "timeslot_duration": "00:05",
       "time_zone_name": "Europe/Zurich",
+      "rooms": [
+        {
+          "name": "Winterchaos",
+          "guid": "99411f15-7335-4d36-abac-3ff0419ec954",
+          "description": "Talks at LuXerias and LABOR Luzerns Winterchaos 2022",
+          "capacity": null
+        }
+      ],
       "days": [
         {% assign days = site.sessions | group_by: "day" | sort: "name" %}
         {% assign all_sessions = days | map: "items" %}
@@ -30,7 +39,7 @@ layout: null
                 {% assign sessions = day.items | where: "public", true | sort: "start" %}
                 {% for session in sessions %}
                 {
-                  "id": "{{ session.slug | split: '-' | first }}",
+                  "id": {{ session.slug | split: '-' | first }},
                   "guid": "{{ session.talk_guid }}",
                   "logo": "",
                   "date": "{{ session.day }}T{{ session.start }}:00+01:00",
@@ -59,14 +68,12 @@ layout: null
                         "id": {{ speaker_id }},
                         "code": "{{ speaker | upcase | slice: 0, 3}}{{ speaker_id }}",
                         "public_name": "{{ speaker }}",
-                        "bibliography": "",
-                        "answers": []
+                        "bibliography": ""
                       }{% unless forloop.last %},{% endunless %}
                       {% endfor %}
                   ],
                   "links": [],
-                  "attachments": [],
-                  "answers": []
+                  "attachments": []
                 }{% unless forloop.last %},{% endunless %}
                 {% endfor %}
               ]
@@ -75,14 +82,6 @@ layout: null
           {% assign i = i | plus:1 %}
         {% endfor %}
       ]
-    },
-    "rooms": [
-      {
-        "name": "Winterchaos",
-        "guid": "99411f15-7335-4d36-abac-3ff0419ec954",
-        "description": "Talks at LuXerias and LABOR Luzerns Winterchaos 2022",
-        "capacity": null
-      }
-    ]
+    }
   }
 }
