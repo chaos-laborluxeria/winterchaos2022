@@ -64,7 +64,7 @@ layout: null
                         "id": {{ speaker.id | default: "-1" }},
                         "code": "{{ speaker.code }}",
                         "public_name": "{{ speaker_name }}",
-                        "biography": "{{ speaker.biography }}",
+                        "biography": "{{ speaker.biography }}"
                       }{% unless forloop.last %},{% endunless %}
                       {% endfor %}
                   ],
