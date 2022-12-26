@@ -37,6 +37,16 @@ layout: single
         <i class="far fa-user"></i> {{ session.speakers | join: ", " }}
     </span>
     {% endif %}
+    {% if session.do_not_stream == false %}
+    <span class="session-item">
+        <i class="fas fa-video"></i> Wird gestreamed
+    </span>
+    {% endif %}
+    {% if session.do_not_record == false %}
+    <span class="session-item">
+        <i class="fas fa-file-video"></i> Wird aufgenommen
+    </span>
+    {% endif %}
 </div>
 
 {% if session.desc %}
