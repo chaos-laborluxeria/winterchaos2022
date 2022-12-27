@@ -93,8 +93,8 @@ defaults:
 
           <i class="fas fa-fw fa-comments"></i>
             <a href="https://matrix.to/#/#chaos:laborluzern.ch">#chaos:laborluzern.ch</a> <br>
-          <!-- <i class="fas fa-fw fa-video"></i>
-            <a href="https://meet.luxeria.ch/ChaosImLabor">meet.luxeria.ch/ChaosImLabor</a> -->
+          <i class="fas fa-fw fa-video"></i>
+            <a href="https://streaming.media.ccc.de/jev22/winterchaos">Stream auf media.ccc.de</a>
   # _posts
   - scope:
       path: ""
