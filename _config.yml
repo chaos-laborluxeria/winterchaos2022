@@ -91,10 +91,15 @@ defaults:
           <i class="fas fa-fw fa-map-marked-alt"></i>
             <a href="https://goo.gl/maps/HrSMu33hREPF8U8XA">Degenstrasse 3, 6010 Kriens</a>
 
-          <i class="fas fa-fw fa-comments"></i>
-            <a href="https://matrix.to/#/#chaos:laborluzern.ch">#chaos:laborluzern.ch</a> <br>
+          <b>Stream:</b> <br>
           <i class="fas fa-fw fa-video"></i>
-            <a href="https://streaming.media.ccc.de/jev22/winterchaos">Stream auf media.ccc.de</a>
+            <a href="https://streaming.media.ccc.de/jev22/winterchaos">Winterchaos auf media.ccc.de</a>
+
+          <b>Chat für Fragen:</b> <br>
+          <i class="fas fa-fw fa-comments"></i>
+            <a href="https://matrix.to/#/#chaos:laborluzern.ch">#chaos:laborluzern.ch</a> (Matrix)<br>
+          <i class="fas fa-hashtag"></i>
+            <a href="https://kiwiirc.com/nextclient/irc.libera.chat/?theme=cli#winterchaos">#winterchaos@irc.libera.chat</a> (IRC)
   # _posts
   - scope:
       path: ""
