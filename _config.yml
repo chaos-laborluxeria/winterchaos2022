@@ -99,7 +99,7 @@ defaults:
           <i class="fas fa-fw fa-comments"></i>
             <a href="https://matrix.to/#/#chaos:laborluzern.ch">#chaos:laborluzern.ch</a> (Matrix)<br>
           <i class="fas fa-hashtag"></i>
-            <a href="https://kiwiirc.com/nextclient/irc.libera.chat/?theme=cli#winterchaos">#winterchaos@irc.libera.chat</a> (IRC)
+            <a href="https://web.libera.chat/#winterchaos">#winterchaos@irc.libera.chat</a> (IRC)
   # _posts
   - scope:
       path: ""
